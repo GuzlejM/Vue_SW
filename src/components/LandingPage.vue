@@ -2,7 +2,10 @@
   <p>Search</p>
   <p class="text-3xl font-bold underline">Filter</p>
   <p>List of characters</p>
-  <div v-if="loading">loading...</div>
+  <div v-if="loading">
+    <i class="fa-solid fa-spinner-third"></i>
+    <h1>loading...</h1>
+  </div>
   <li v-else v-for="(person, index) in data.results" :key="index">
     {{ person.name }}
   </li>
@@ -12,6 +15,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
+
+import SearchFilter from './SearchFilter.vue';
 
 interface Data {
   count: number;
