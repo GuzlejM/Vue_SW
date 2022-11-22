@@ -1,7 +1,9 @@
 <template>
   <SearchFilter />
-  <CharactersList />
-  <p>pagination</p>
+  <div class="m-24 p-10 shadow-card_default hover:shadow-card_hovered">
+    <CharactersList />
+    <p>pagination</p>
+  </div>
 </template>
 
 <script lang="ts">

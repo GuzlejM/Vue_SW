@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="flex justify-center font-poppins">
+  <div class="flex justify-center font-poppins m-5 border-l-orange-200">
     <div v-if="loading">
       <font-awesome-icon icon="fa-solid fa-spinner" />
       <h1>loading characters list...</h1>

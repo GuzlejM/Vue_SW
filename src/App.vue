@@ -18,6 +18,9 @@ export default defineComponent({
 #app {
   font-family: Poppins, sans-serif;
   text-align: center;
-  margin-top: 60px;
+}
+html,
+body {
+  height: 100vh;
 }
 </style>
