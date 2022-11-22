@@ -1,7 +1,9 @@
 <template>
   <p>Search</p>
   <p>Filter</p>
-  <p>List</p>
+  <li v-for="(person, index) in data.results" :key="index">
+    {{ person.name }}
+  </li>
 </template>
 
 <script lang="ts">
@@ -16,6 +18,7 @@ interface Data {
 }
 
 interface People {
+  img: string;
   birth_year: string;
   eye_color: string;
   films: string[];
@@ -36,14 +39,17 @@ export default defineComponent({
     return {
       data: {} as Data,
       people: [] as People[],
+      // dont forget count number cant be higher thatn 10 and less than 1 (because of number of pages)
+      count: 1 as number,
     };
   },
   methods: {
     async fetchStarWarsData() {
       const swApiResponse = await axios.get<Data>(
-        "https://swapi.dev/api/people"
+        "https://swapi.dev/api/people/?page=1"
       );
       this.data = swApiResponse.data;
+      console.log(this.data.results);
     },
   },
   async mounted() {
