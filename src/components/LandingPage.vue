@@ -1,9 +1,12 @@
 <template>
   <p>Search</p>
-  <p>Filter</p>
-  <li v-for="(person, index) in data.results" :key="index">
+  <p class="text-3xl font-bold underline">Filter</p>
+  <p>List of characters</p>
+  <div v-if="loading">loading...</div>
+  <li v-else v-for="(person, index) in data.results" :key="index">
     {{ person.name }}
   </li>
+  <p>pagination</p>
 </template>
 
 <script lang="ts">
@@ -41,6 +44,7 @@ export default defineComponent({
       people: [] as People[],
       // dont forget count number cant be higher thatn 10 and less than 1 (because of number of pages)
       count: 1 as number,
+      loading: true as boolean,
     };
   },
   methods: {
@@ -49,6 +53,7 @@ export default defineComponent({
         "https://swapi.dev/api/people/?page=1"
       );
       this.data = swApiResponse.data;
+      this.loading = false;
       console.log(this.data.results);
     },
   },
