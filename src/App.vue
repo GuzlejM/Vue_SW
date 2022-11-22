@@ -16,7 +16,7 @@ export default defineComponent({
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   text-align: center;
   margin-top: 60px;
 }
