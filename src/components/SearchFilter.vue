@@ -2,7 +2,7 @@
   <div class="flex justify-between font-poppins m-5 mx-24">
     <div class="rounded-full w-2/5 relative">
       <div
-        class="rounded-full bg-yellow-secondary text-yellow-primary hover:text-white hover:bg-yellow-primary cursor-pointer p-3 absolute left-0 z-10"
+        class="rounded-full bg-yellow-secondary text-yellow-primary hover:text-white hover:bg-yellow-primary cursor-pointer p-3 absolute left-0 z-10 transition ease duration-300"
       >
         Search
       </div>
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div
-      class="rounded-full bg-yellow-secondary text-yellow-primary hover:text-white hover:bg-yellow-primary p-3"
+      class="rounded-full bg-yellow-secondary text-yellow-primary hover:text-white hover:bg-yellow-primary p-3 transition ease duration-300 cursor-pointer"
     >
       Filter
     </div>

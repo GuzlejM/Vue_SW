@@ -1,6 +1,8 @@
 <template>
   <SearchFilter />
-  <div class="m-24 p-10 shadow-card_default hover:shadow-card_hovered">
+  <div
+    class="m-24 p-10 shadow-card_default hover:shadow-card_hovered transition ease duration-300"
+  >
     <CharactersList />
     <p>pagination</p>
   </div>

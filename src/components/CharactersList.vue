@@ -7,15 +7,20 @@
       />
       <h1>loading characters list...</h1>
     </div>
-    <li v-else v-for="(person, index) in data.results" :key="index">
-      {{ person.name }}
-    </li>
+    <div v-else>
+      <CharacterCard
+        v-for="(character, index) in data.results"
+        :key="index"
+        :character="character"
+      />
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
 
+import CharacterCard from "./CharacterCard.vue";
 interface Data {
   count: number;
   next: string;
@@ -42,6 +47,7 @@ interface People {
 
 export default defineComponent({
   name: "CharacterList",
+  components: { CharacterCard },
   data() {
     return {
       data: {} as Data,
