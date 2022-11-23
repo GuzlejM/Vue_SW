@@ -1,7 +1,10 @@
 <template lang="">
   <div class="flex justify-center font-poppins m-5 border-l-orange-200">
     <div v-if="loading">
-      <font-awesome-icon icon="fa-solid fa-spinner" />
+      <font-awesome-icon
+        icon="fa-solid fa-spinner"
+        class="text-yellow-primary"
+      />
       <h1>loading characters list...</h1>
     </div>
     <li v-else v-for="(person, index) in data.results" :key="index">

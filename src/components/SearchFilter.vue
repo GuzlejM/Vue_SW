@@ -2,15 +2,31 @@
   <div class="flex justify-between font-poppins m-5 mx-24">
     <div class="rounded-full w-2/5 relative">
       <div
-        class="rounded-full bg-yellow-secondary text-yellow-primary p-3 absolute left-0 z-10"
+        class="rounded-full bg-yellow-secondary text-yellow-primary hover:text-white hover:bg-yellow-primary cursor-pointer p-3 absolute left-0 z-10"
       >
         Search
       </div>
       <div
-        class="border-2 border-black w-full absolute rounded-full h-full z-0 left-1"
-      ></div>
+        class="border-4 border-yellow-secondary w-full absolute rounded-full h-full z-0 left-1"
+      >
+        <input
+          type="text"
+          name="text"
+          id=""
+          class="ml-8 w-9/12 focus:outline-none h-full active:bg-opacity-0"
+        />
+      </div>
+
+      <div class="absolute right-2 top-2 h-full">
+        <font-awesome-icon
+          icon="fa-solid fa-magnifying-glass"
+          class="h-3/5 cursor-pointer"
+        />
+      </div>
     </div>
-    <div class="rounded-full bg-yellow-secondary text-yellow-primary p-3">
+    <div
+      class="rounded-full bg-yellow-secondary text-yellow-primary hover:text-white hover:bg-yellow-primary p-3"
+    >
       Filter
     </div>
   </div>
