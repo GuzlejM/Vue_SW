@@ -11,6 +11,9 @@ module.exports = {
         "yellow-primary": "#f5a816",
         "yellow-secondary": "#fdedd0",
       },
+      animation: {
+        default: "transition ease duration-300",
+      },
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
