@@ -14,6 +14,9 @@ module.exports = {
       animation: {
         default: "transition ease duration-300",
       },
+      margin: {
+        responsive: "m-3 sm:m-6 md:mx-8 lg:m-5 lg:mx-24",
+      },
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
