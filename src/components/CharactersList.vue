@@ -1,5 +1,7 @@
 <template lang="">
-  <div class="flex justify-center font-poppins m-5 border-l-orange-200">
+  <div
+    class="flex flex-wrap justify-center font-poppins m-5 border-l-orange-200"
+  >
     <div v-if="loading">
       <font-awesome-icon
         icon="fa-solid fa-spinner"
@@ -7,13 +9,12 @@
       />
       <h1>loading characters list...</h1>
     </div>
-    <div v-else>
-      <CharacterCard
-        v-for="(character, index) in data.results"
-        :key="index"
-        :character="character"
-      />
-    </div>
+    <CharacterCard
+      v-for="(character, index) in data.results"
+      :key="index"
+      :character="character"
+      :index="index"
+    />
   </div>
 </template>
 <script lang="ts">
@@ -58,7 +59,7 @@ export default defineComponent({
     };
   },
   methods: {
-    async fetchStarWarsData() {
+    async fetchStarWarsCharacters() {
       const swApiResponse = await axios.get<Data>(
         "https://swapi.dev/api/people/?page=1"
       );
@@ -68,7 +69,7 @@ export default defineComponent({
     },
   },
   async mounted() {
-    await this.fetchStarWarsData();
+    await this.fetchStarWarsCharacters();
   },
 });
 </script>
