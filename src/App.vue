@@ -1,10 +1,10 @@
 <template>
-  <LandingPage />
+  <LandingPage class="bg-red-700" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import LandingPage from "./components/LandingPage.vue";
+import LandingPage from "./components/LandingPage/LandingPage.vue";
 
 export default defineComponent({
   name: "App",
