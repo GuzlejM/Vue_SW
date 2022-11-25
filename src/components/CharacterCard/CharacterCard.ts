@@ -1,22 +1,3 @@
-<template lang="">
-  <div
-    class="mr-10 mt-5 border-4 rounded-md border-yellow-primary w-1/6 p-3 flex flex-col items-center"
-  >
-    <div class="rounded-full w-4/6 h-4/6 overflow-hidden">
-      <img
-        :src="`https://starwars-visualguide.com/assets/img/characters/${
-          index + 1
-        }.jpg`"
-        :alt="character.name"
-      />
-    </div>
-    <div>
-      <h1>{{ character.name }}</h1>
-      <p class="text-yellow-primary">{{ this.planet.name }}</p>
-    </div>
-  </div>
-</template>
-<script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
 
@@ -58,5 +39,3 @@ export default defineComponent({
     // ...
   },
 });
-</script>
-<style lang=""></style>

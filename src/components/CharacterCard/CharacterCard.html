@@ -1,0 +1,18 @@
+  <!-- // Card -->
+  <div
+    class="border-yellow-primary border-4 flex flex-col items-center mr-10 mt-5 rounded-md w-1/6 p-3"
+  >
+    <!-- // Card content -->
+    <div class="rounded-full w-4/6 h-4/6 overflow-hidden">
+      <img
+        :src="`https://starwars-visualguide.com/assets/img/characters/${
+          index + 1
+        }.jpg`"
+        :alt="character.name"
+      />
+    </div>
+    <div>
+      <h1 class="font-semibold">{{ character.name }}</h1>
+      <p class="text-yellow-primary">{{ this.planet.name }}</p>
+    </div>
+  </div>

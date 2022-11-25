@@ -1,27 +1,7 @@
-<template lang="">
-  <div
-    class="flex flex-wrap justify-center font-poppins m-5 border-l-orange-200"
-  >
-    <div v-if="loading">
-      <font-awesome-icon
-        icon="fa-solid fa-spinner"
-        class="text-yellow-primary"
-      />
-      <h1>loading characters list...</h1>
-    </div>
-    <CharacterCard
-      v-for="(character, index) in data.results"
-      :key="index"
-      :character="character"
-      :index="index"
-    />
-  </div>
-</template>
-<script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
 
-import CharacterCard from "./CharacterCard.vue";
+import CharacterCard from "../CharacterCard/CharacterCard.vue";
 interface Data {
   count: number;
   next: string;
@@ -72,5 +52,3 @@ export default defineComponent({
     await this.fetchStarWarsCharacters();
   },
 });
-</script>
-<style lang=""></style>
