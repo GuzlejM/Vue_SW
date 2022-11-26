@@ -1,9 +1,11 @@
 <!-- // Card -->
 <div
-  class="border-yellow-secondary border-4 flex flex-col group items-center p-3 mb-5 rounded-md lg:mr-10 lg:mt-5 lg:w-1/6 relative"
+  class="border-yellow-secondary hover:border-yellow-primary border-4 flex flex-col group items-center p-3 mb-5 rounded-md lg:mr-10 lg:mt-5 lg:w-1/6 relative"
 >
   <!-- // Card content -->
-  <div class="rounded-full w-4/6 h-4/6 overflow-hidden z-10">
+  <div
+    class="rounded-full w-4/6 h-4/6 overflow-hidden z-10 group-hover:scale-75 group-hover:transition-all group-hover:linear group-hover:duration-300 group-hover:border-8 group-hover:border-yellow-primary transition-all linear duration-500"
+  >
     <img
       :src="`https://starwars-visualguide.com/assets/img/characters/${
           index + 1
@@ -17,6 +19,9 @@
   </div>
   <!-- Card background hover effect -->
   <div
-    class="group-hover:absolute group-hover:transition group-hover:ease group-hover:duration-300 group-hover:bg-yellow-primary group-hover:h-2/3 group-hover:rounded-b-full group-hover:top-0 group-hover:w-full group-hover:z-0"
+    class="group-hover:absolute group-hover:bottom-10 group-hover:duration-300 h-0 group-hover:linear group-hover:scale-100 group-hover:transition-all group-hover:bg-yellow-primary group-hover:h-2/5 group-hover:rounded-b-full group-hover:top-0 group-hover:w-full group-hover:z-0"
+  ></div>
+  <div
+    class="group-hover:absolute group-hover:duration-300 h-0 group-hover:linear group-hover:scale-100 group-hover:transition-all group-hover:bg-yellow-primary group-hover:h-1/6 group-hover:rounded-t-lg group-hover:bottom-0 group-hover:w-full group-hover:z-0"
   ></div>
 </div>
